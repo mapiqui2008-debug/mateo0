@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Mate Tomate - Postres Destacados</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="destacados.css"> <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    
+    <header>
+        <h1 id="titulo1">🌟 Postres Destacados del Mundo 🌍</h1>
+        <p>Los clásicos que nos inspiran y que debes probar</p>
+        <button id="darkModeToggle" class="btn-accion">🌙 Modo Oscuro</button>
+        <button class="btn-accion" id="btnCambiarColor">🎨 Cambiar Color de Fondo</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="btn-accion-nav">⬅️ Sabores de la Semana</a></li>
+            <li><a href="#destacados" data-target="destacados">Destacados</a></li>
+            <li><a href="https://www.facebook.com/matetomatepasteleria" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section class="filtro-section">
+            <h2>Filtra por País</h2>
+            <div class="filtro-postres">
+                <button class="btn-accion btn-filtro activo" data-filtro="todos">Ver Todos</button>
+                <button class="btn-accion btn-filtro" data-filtro="Italia">Italia</button>
+                <button class="btn-accion btn-filtro" data-filtro="EE. UU.">EE. UU.</button>
+                <button class="btn-accion btn-filtro" data-filtro="Latinoamérica">Latinoamérica</button>
+                <button class="btn-accion btn-filtro" data-filtro="Medio Oriente">Medio Oriente</button>
+                <button class="btn-accion btn-filtro" data-filtro="Francia">Francia</button>
+            </div>
+        </section>
+
+        <section id="destacados" class="destacados-pagina-secundaria">
+            <h2>Nuestros Favoritos de la Cocina Global</h2>
+            
+            <div class="destacados-grid">
+                
+                <div class="postre-card" data-origen="Italia">
+                    <img src="imagenes\tiramisu.jpg" alt="Imagen de Tiramisú">
+                    <h3>Tiramisú (Italia)</h3>
+                    <p>Bizcochos de soletilla bañados en café, cubiertos con una rica crema de queso **Mascarpone** y cacao en polvo. ¡Un clásico insuperable!</p>
+                </div>
+                
+                <div class="postre-card" data-origen="EE. UU.">
+                    <img src="imagenes\cheesecake.jpg" alt="Imagen de Cheesecake">
+                    <h3>Cheesecake (EE. UU.)</h3>
+                    <p>La combinación perfecta de base crujiente de galleta y un relleno cremoso de queso. Lo servimos con mermelada de **frutos rojos**.</p>
+                </div>
+
+                <div class="postre-card" data-origen="Latinoamérica">
+                    <img src="imagenes\torta_tres_leches.jpg" alt="Imagen de Torta Tres Leches">
+                    <h3>Torta Tres Leches (Latinoamérica)</h3>
+                    <p>Una esponjosa torta que se baña en tres tipos de leche (entera, condensada y evaporada). Suave, húmeda y con un toque de canela.</p>
+                </div>
+
+                <div class="postre-card" data-origen="Medio Oriente">
+                    <img src="imagenes\Baklava(1).png" alt="Imagen de Baklava">
+                    <h3>Baklava (Medio Oriente)</h3>
+                    <p>Exquisitas capas de masa filo crujiente, rellenas de nueces picadas y bañadas en un jarabe dulce de miel y especias. **Textura única**.</p>
+                </div>
+
+                <div class="postre-card" data-origen="Francia">
+                    <img src="imagenes\creme.avif" alt="Imagen de Crème brûlée">
+                    <h3>Crème brûlée (Francia)</h3>
+                    <p>Una rica crema de huevo cubierta por una capa delgada de azúcar caramelizada que se rompe con un 'crac'. Elegancia y sabor.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="acciones-section">
+            <div class="acciones">
+                <button class="btn-accion" id="btnSaludo">🎉 Mostrar saludo</button>
+                <button class="btn-accion" id="btnResaltar">✨ Resaltar postre al azar</button>
+                <button class="btn-accion" id="btnArriba">⬆️ Volver arriba</button>
+            </div>
+            <div class="enlaces-navegacion">
+                <a href="index.html" class="btn-accion">⬅️ Volver a la página principal</a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2025 Pastelería Mate Tomate - Dulces experiencias para compartir</p>
+    </footer>
+
+    <script src="script2.js"></script> 
+</body>
+</html>

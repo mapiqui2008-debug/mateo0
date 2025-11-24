@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Mate Tomate - Inicio</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    
+    <div id="progressBar"></div>
+
+    <header>
+        <h1 id="titulo1">🍰 Pastelería Mate Tomate 🍅</h1>
+        <p>Los postres más frescos y creativos de la ciudad</p>
+        <button id="darkModeToggle" class="btn-accion">🌙 Modo Oscuro</button>
+        <button class="btn-accion" id="btnCambiarColor">🎨 Cambiar Color de Fondo</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sabores" class="active-nav">Sabores de la Semana</a></li>
+            <li><a href="postresdestacados.html" class="btn-accion-nav">🌟 Ver Destacados</a></li>
+            <li><a href="#historia">Nuestra Historia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="sabores">
+            <h2>Sabores de la Semana</h2>
+            
+            <div class="contenido-sabores-flex">
+                
+                <div class="postre-list">
+                    <h3 class="menu-titulo">Menú Actual</h3> 
+                    
+                    <div class="filtro-postres">
+                        <button class="btn-accion btn-filtro activo" data-filtro="todo">Todo</button>
+                        <button class="btn-accion btn-filtro" data-filtro="fruta">Fruta</button>
+                        <button class="btn-accion btn-filtro" data-filtro="chocolate">Chocolate</button>
+                        <button class="btn-accion btn-filtro" data-filtro="clasico">Clásico</button>
+                    </div>
+
+                    <ul id="listaPostres">
+                        <li data-sabor="Tarta de Fresa" data-detalle="Fresco bizcocho de vainilla con capas de crema chantilly y fresas naturales. Tipo: Fruta." data-categoria="fruta">🍓 Tarta de Fresa</li>
+                        <li data-sabor="Mousse de Chocolate Oscuro" data-detalle="Intensa mousse 70% cacao. Textura ligera y sabor profundo. Tipo: Chocolate." data-categoria="chocolate">🍫 Mousse de Chocolate Oscuro</li>
+                        <li data-sabor="Pie de Limón Clásico" data-detalle="Relleno cremoso de limón con merengue suizo flameado. Tipo: Clásico." data-categoria="clasico">🍋 Pie de Limón Clásico</li>
+                        <li data-sabor="Cheesecake de Maracuyá" data-detalle="Base de galleta, queso crema y una intensa cobertura ácida de maracuyá. Tipo: Fruta." data-categoria="fruta">🥭 Cheesecake de Maracuyá</li>
+                        <li data-sabor="Volcán de Arequipe" data-detalle="Pequeño bizcocho tibio que libera un centro líquido de arequipe (dulce de leche). Tipo: Clásico." data-categoria="clasico">🍮 Volcán de Arequipe</li>
+                    </ul>
+
+                    <div id="detalleSabor">
+                        <h3>Detalle:</h3>
+                        <p>Selecciona un postre de la lista para ver su descripción.</p>
+                    </div>
+                </div>
+
+                <div class="oferta-lateral">
+                    <h3>¡Oferta del Día!</h3>
+                    <p>Hoy, 2x1 en todos los Pie de Limón.</p>
+                    <img class="img-oferta" src="imagenes\pie de limon.jpg" alt="Oferta 2x1 Pie de Limón"> 
+                </div>
+            </div>
+        </section>
+
+        <section id="historia" class="parallax-section">
+            <div class="parallax-content fade-in-scroll">
+                <h2>Nuestra Historia: La Fusión Mate y Tomate</h2>
+                <div class="historia-content">
+                    <img class="historia-img" src="imagenes\bogota antes.jpg" alt="Pastelería antigua"> 
+                    <p>Nacimos en 2015 de la inusual combinación de dos pasiones: la dulzura tradicional de la abuela (el Mate, un postre clásico local) y la acidez creativa del chef (el Tomate, por su enfoque en balancear sabores). Mate Tomate representa el equilibrio perfecto entre lo clásico y lo audaz. Nuestro objetivo es que cada postre cuente una historia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="elegirnos">
+            <h2 class="fade-in-scroll">Por Qué Elegirnos</h2>
+            <div class="stats-grid">
+                <div class="stat-item fade-in-scroll">
+                    <h3 id="contadorRecetas" data-target="25">0</h3>
+                    <p>Recetas Únicas</p>
+                </div>
+                <div class="stat-item fade-in-scroll">
+                    <h3 id="contadorClientes" data-target="1500">0</h3>
+                    <p>Clientes Felices</p>
+                </div>
+                <div class="stat-item fade-in-scroll">
+                    <h3 id="contadorAños" data-target="8">0</h3>
+                    <p>Años de Experiencia</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios">
+            <h2 class="fade-in-scroll">Lo que Dicen Nuestros Clientes</h2>
+            <div class="testimonial-carousel-wrapper fade-in-scroll">
+                <div class="testimonial-carousel">
+                    <div class="testimonial-card active-testimonio" data-index="0">
+                        <p>"El mejor Tiramisú que he probado fuera de Italia. La frescura es inigualable."</p>
+                        <h4>— Ana R.</h4>
+                    </div>
+                    <div class="testimonial-card" data-index="1">
+                        <p>"Mi hijo ya solo quiere la Tarta de Fresa de Mate Tomate para su cumpleaños. ¡Un 10!"</p>
+                        <h4>— Javier M.</h4>
+                    </div>
+                    <div class="testimonial-card" data-index="2">
+                        <p>"Excelente atención y el Pie de Limón es la perfección entre dulce y ácido."</p>
+                        <h4>— Sofía P.</h4>
+                    </div>
+                </div>
+                <button class="carousel-btn prev-btn" id="prevBtn">❮</button>
+                <button class="carousel-btn next-btn" id="nextBtn">❯</button>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Nuestra Galería de Creaciones</h2>
+            <div class="gallery fade-in-scroll">
+                <img src="imagenes\postre chocolate.jpg" alt="Tarta de Chocolate">
+                <img src="imagenes\cheesecake.jpg" alt="Cupcakes de Vainilla">
+                <img src="imagenes\cuatro-macarons-colores.avif" alt="Macarons de Colores">
+                <img src="imagenes\donas_l_thumb.jpg" alt="Donas Glaseadas">
+            </div>
+            <a href="https://www.instagram.com/mate_tomate_pasteleria" target="_blank" class="enlace-galeria">Ver más en Instagram</a>
+        </section>
+
+        <section id="video" class="video-destacado">
+            <h2>Cómo hacemos nuestro famoso "Volcán de Arequipe"</h2>
+            <div class="video-responsive fade-in-scroll">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=iNlQ2hA_JtEw9SgS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-container fade-in-scroll">
+                <div class="faq-item">
+                    <div class="faq-question">¿Tienen opciones veganas?</div>
+                    <div class="faq-answer"><p>Sí, ofrecemos una deliciosa tarta de manzana vegana y galletas de avena. ¡Pregunta por el menú del día!</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Hacen pedidos personalizados para eventos?</div>
+                    <div class="faq-answer"><p>Absolutamente. Contáctanos con al menos una semana de anticipación para discutir tu diseño y sabor ideal.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuáles son sus horarios de atención?</div>
+                    <div class="faq-answer"><p>Abrimos de Martes a Sábado de 10:00 AM a 7:00 PM. Los Domingos de 11:00 AM a 5:00 PM.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="matrix-section">
+            <h2>¿Quién hace la magia?</h2>
+            <p>Descubre el sabor secreto en nuestro Código Fuente...</p>
+            <div id="matrix">&nbsp; postres 2 x 1&nbsp;</div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos y Haz tu Pedido</h2>
+            
+            <div class="info-contacto">
+                <div>
+                    <h3>📍 Dirección</h3>
+                    <p>Calle Ficticia #123, Zona Centro, Ciudad Deliciosa.</p>
+                </div>
+                <div>
+                    <h3>📞 Teléfono</h3>
+                    <p>(+57) 300 123 4567</p>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <h3>Envíanos un Mensaje</h3>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <div id="error-nombre" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div id="error-email" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje (o Pedido):</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <div id="error-mensaje" class="error-message"></div>
+                </div>
+                <button type="submit" class="btn-accion">Enviar Mensaje</button>
+                <div id="successMessage" class="success-message" style="display:none;"></div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Pastelería Mate Tomate - Dulces experiencias para compartir</p>
+    </footer>
+    
+    <button class="btn-accion" id="btnArriba">⬆️</button>
+
+    <script src="script.js"></script>
+    
+    <script>
+    var rows=11;var speed=5;var reveal=2;var effectalign="default"
+    var w3c=document.getElementById&&!window.opera;;var ie45=document.all&&!window.opera;var ma_tab,matemp,ma_bod,ma_row,x,y,columns,ma_txt,ma_cho;var m_coch=new Array();var m_copo=new Array();window.onload=function(){if(!w3c&&!ie45)return
+    var matrix=(w3c)?document.getElementById("matrix"):document.all["matrix"];ma_txt=(w3c)?matrix.firstChild.nodeValue:matrix.innerHTML;ma_txt=" "+ma_txt+" ";columns=ma_txt.length;if(w3c){while(matrix.childNodes.length)matrix.removeChild(matrix.childNodes[0]);ma_tab=document.createElement("table");ma_tab.setAttribute("border",0);ma_tab.setAttribute("align",effectalign);ma_tab.style.backgroundColor="#000000";ma_bod=document.createElement("tbody");for(x=0;x<rows;x++){ma_row=document.createElement("tr");for(y=0;y<columns;y++){matemp=document.createElement("td");matemp.setAttribute("id","Mx"+x+"y"+y);matemp.className="matrix";matemp.appendChild(document.createTextNode(String.fromCharCode(160)));ma_row.appendChild(matemp);}
+    ma_bod.appendChild(ma_row);}
+    ma_tab.appendChild(ma_bod);matrix.appendChild(ma_tab);}else{ma_tab='<ta'+'ble align="'+effectalign+'" border="0" style="background-color:#000000">';for(var x=0;x<rows;x++){ma_tab+='<t'+'r>';for(var y=0;y<columns;y++){ma_tab+='<t'+'d class="matrix" id="Mx'+x+'y'+y+'">&nbsp;</'+'td>';}
+    ma_tab+='</'+'tr>';}
+    ma_tab+='</'+'table>';matrix.innerHTML=ma_tab;}
+    ma_cho=ma_txt;for(x=0;x<columns;x++){ma_cho+=String.fromCharCode(32+Math.floor(Math.random()*94));m_copo[x]=0;}
+    ma_bod=setInterval("mytricks()",speed);}
+    function mytricks(){x=0;for(y=0;y<columns;y++){x=x+(m_copo[y]==100);ma_row=m_copo[y]%100;if(ma_row&&m_copo[y]<100){if(ma_row<rows+1){if(w3c){matemp=document.getElementById("Mx"+(ma_row-1)+"y"+y);matemp.firstChild.nodeValue=m_coch[y];}
+    else{matemp=document.all["Mx"+(ma_row-1)+"y"+y];matemp.innerHTML=m_coch[y];}
+    matemp.style.color="#FF0000";matemp.style.fontWeight="bold";}
+    if(ma_row>1&&ma_row<rows+2){matemp=(w3c)?document.getElementById("Mx"+(ma_row-2)+"y"+y):document.all["Mx"+(ma_row-2)+"y"+y];matemp.style.fontWeight="normal";matemp.style.color="#00ff00";}
+    if(ma_row>2){matemp=(w3c)?document.getElementById("Mx"+(ma_row-3)+"y"+y):document.all["Mx"+(ma_row-3)+"y"+y];matemp.style.color="#009900";}
+    if(ma_row<Math.floor(rows/2)+1)m_copo[y]++;else if(ma_row==Math.floor(rows/2)+1&&m_coch[y]==ma_txt.charAt(y))zoomer(y);else if(ma_row<rows+2)m_copo[y]++;else if(m_copo[y]<100)m_copo[y]=0;}
+    else if(Math.random()>0.9&&m_copo[y]<100){m_coch[y]=ma_cho.charAt(Math.floor(Math.random()*ma_cho.length));m_copo[y]++;}}
+    if(x==columns)clearInterval(ma_bod);}
+    function zoomer(ycol){var mtmp,mtem,ytmp;if(m_copo[ycol]==Math.floor(rows/2)+1){for(ytmp=0;ytmp<rows;ytmp++){if(w3c){mtmp=document.getElementById("Mx"+ytmp+"y"+ycol);mtmp.firstChild.nodeValue=m_coch[ycol];}
+    else{mtmp=document.all["Mx"+ytmp+"y"+ycol];mtmp.innerHTML=m_coch[ycol];}
+    mtmp.style.color="#FF0000";mtmp.style.fontWeight="bold";}
+    if(Math.random()<reveal){mtmp=ma_cho.indexOf(ma_txt.charAt(ycol));ma_cho=ma_cho.substring(0,mtmp)+ma_cho.substring(mtmp+1,ma_cho.length);}
+    if(Math.random()<reveal-1)ma_cho=ma_cho.substring(0,ma_cho.length-1);m_copo[ycol]+=199;setTimeout("zoomer("+ycol+")",speed);}
+    else if(m_copo[ycol]>200){if(w3c){mtmp=document.getElementById("Mx"+(m_copo[ycol]-201)+"y"+ycol);mtem=document.getElementById("Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol);}
+    else{mtmp=document.all["Mx"+(m_copo[ycol]-201)+"y"+ycol];mtem=document.all["Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol];}
+    mtmp.style.fontWeight="normal";mtem.style.fontWeight="normal";setTimeout("zoomer("+ycol+")",speed);}
+    else if(m_copo[ycol]==200)m_copo[ycol]=100+Math.floor(rows/2);if(m_copo[ycol]>100&&m_copo[ycol]<200){if(w3c){mtmp=document.getElementById("Mx"+(m_copo[ycol]-101)+"y"+ycol);mtmp.firstChild.nodeValue=String.fromCharCode(160);mtem=document.getElementById("Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol);mtem.firstChild.nodeValue=String.fromCharCode(160);}
+    else{mtmp=document.all["Mx"+(m_copo[ycol]-101)+"y"+ycol];mtmp.innerHTML=String.fromCharCode(160);mtem=document.all["Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol];mtem.innerHTML=String.fromCharCode(160);}
+    setTimeout("zoomer("+ycol+")",speed);}}
+    </script>
+</body>
+</html>
